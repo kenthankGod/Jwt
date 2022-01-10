@@ -1,0 +1,57 @@
+<%- include('partials/header'); -%>
+
+    <form>
+        <h2>Sign Up</h2>
+        <label for="email">Email</label>
+        <input type="text" name="email" required>
+        <div class="email error" style="color: red;"></div>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" required>
+        <div class="password error" style="color: red;"></div>
+
+        <button>Become a red</button>
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        // this is to make errors show in in the form.
+        const emailError = document.querySelector('.email.error');
+        const passwordError = document.querySelector('.password.error');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // to get the values of email and password.
+            const email = form.email.value;
+            const password = form.password.value;
+
+            // this is to clear up errors anytime signup button is clicked.
+            // that is if form rules were met.
+            emailError.textContent = '';
+            passwordError.textContent = '';
+
+            try {
+                const result = await fetch('/signup', {
+                    method: 'POST',
+                    body: JSON.stringify({ email, password }),
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                const data = await result.json();
+                console.log(data)
+
+                if (data.errors) {
+                    emailError.textContent = data.errors.email;
+                    passwordError.textContent = data.errors.password;
+                }
+                // this redirects to home page if form on succeful form submission
+                if (data.user) {
+                    window.location.replace('/')
+                }
+            } catch (error) {
+                console.log(error)
+            }
+
+        })
+    </script>
+    <%- include('partials/footer'); -%>
