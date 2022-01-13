@@ -26,7 +26,7 @@ userSchema.pre("save", async function (next) {
 
 // this the method to login user
 userSchema.statics.login = async (email, password) => {
-  const user = await this.findOne({ email });
+  const user = await User.findOne({ email });
   if (user) {
     const auth = await bcrypt.compare(password, user.password);
     if (auth) {
@@ -35,6 +35,8 @@ userSchema.statics.login = async (email, password) => {
     throw Error("incorrect password");
   }
   throw Error("email does not exist");
+
+  
 };
 
 const User = mongoose.model("user", userSchema);
