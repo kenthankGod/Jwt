@@ -1,17 +1,16 @@
 <%- include('partials/header'); -%>
 
-
     <form>
-        <h2>Log in</h2>
-        <label for="email">Email</label>
+        <h2 class="signup-h2">log in</h2>
+        <label for="email" class="signup-h2">Email</label>
         <input type="text" name="email" required>
-        <div class="email error"></div>
+        <div class="email error" style="color: red;"></div>
 
-        <label for="password">Password</label>
+        <label for="password" class="signup-h2">Password</label>
         <input type="password" name="password" required>
-        <div class="password error"></div>
+        <div class="password error" style="color: red;"></div>
 
-        <button>Login</button>
+        <button class="signup-btn">log in</button>
     </form>
 
     <script>
@@ -52,7 +51,7 @@
             } catch (error) {
                 console.log(error)
             }
+
         })
     </script>
-
     <%- include('partials/footer'); -%>

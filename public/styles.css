@@ -1,11 +1,16 @@
 /* google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Romanesco&display=swap");
 
 body {
   margin: 20px 40px;
   font-size: 1.2rem;
   letter-spacing: 1px;
-  background: #fafafa;
+  background-image: linear-gradient(rgba(3, 2, 2, 0.63), rgba(3, 0, 0, 0.897)),
+    url(staduim.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 h1,
 h2,
@@ -24,6 +29,25 @@ footer {
   padding: 0;
   font-family: "Quicksand", sans-serif;
   color: #444;
+}
+.home-h3,
+.home-h1 {
+  color: #bfcadb;
+  font-family: "Romanesco", cursive;
+}
+.header-home-h3 {
+  font-size: 60px;
+  font-family: "Romanesco", cursive;
+  color: #bfcadb;
+}
+.signup-h2 {
+  font-family: "Romanesco", cursive;
+  color: #bfcadb;
+}
+.signup-btn {
+  background: #f53f36;
+  font-family: "Romanesco", cursive;
+  color: #bfcadb;
 }
 ul {
   list-style-type: none;
@@ -52,9 +76,12 @@ nav li a {
   padding: 10px 16px;
   letter-spacing: 2px;
 }
+button .login {
+  background: #f53f36;
+}
 .btn {
   border-radius: 36px;
-  background: #fee996;
+  background: #f53f36;
 }
 form h2 {
   font-size: 2.4em;
@@ -67,7 +94,7 @@ form {
   padding: 30px;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  background: white;
+  background: transparent;
 }
 input {
   padding: 10px 12px;
@@ -124,28 +151,80 @@ header .btn {
   display: inline-block;
   font-size: 0.8em;
 }
-.red-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 30px;
-  row-gap: 80px;
-  margin: 80px AUTO;
-  max-width: 1200px;
-}
-.red-card {
-  display: inline-block;
-  border-radius: 20px;
-  background: white;
-  position: relative;
-  text-align: center;
-  padding: 0 20px 30px 20px;
-}
-.red-card img {
-  width: 100px;
-  margin: -30px auto 20px;
-}
 footer {
   text-align: center;
   margin-top: 120px;
   color: #aaa;
 }
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+}
+.card {
+  background-color: white;
+  width: 270px;
+  height: 400px;
+  margin: 9px;
+}
+
+.card-image {
+  background-color: #f53f36;
+  height: 300px;
+  margin-bottom: 150px;
+  background-size: cover;
+}
+
+.degea {
+  background-image: url("degea.png");
+}
+
+.bruno {
+  background-image: url("bruno.png");
+}
+
+.fredo {
+  background-image: url("fredo.png");
+}
+
+.ronaldo {
+  background-image: url("ronaldo.png");
+}
+
+.rashford {
+  background-image: url("rashford.png");
+}
+
+.mason {
+  background-image: url("mason.png");
+}
+
+.viktor {
+  background-image: url("viktor.png");
+}
+
+.varane {
+  background-image: url("varane.png");
+}
+
+.shaw {
+  background-image: url("shaw.png");
+}
+
+.dalot {
+  background-image: url("dalot.png");
+}
+
+.tominay {
+  background-image: url("tominay.png");
+}
+
